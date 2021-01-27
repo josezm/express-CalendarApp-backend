@@ -18,9 +18,9 @@ router.get('/', getEventos);
 router.post(
    '/',
    [
-      check('title', 'Titulo obligatorio').not().isEmpty(),
-      check('start', 'Fecha de inicio obligatoria').custom(isDate),
-      check('end', 'Fecha de fin obligatoria').custom(isDate),
+      check('title', 'The title is obligatory.').not().isEmpty(),
+      check('start', 'The start date is obligatory.').custom(isDate),
+      check('end', 'The end date is obligatory.').custom(isDate),
       validarCampos
    ],
    crearEvento);

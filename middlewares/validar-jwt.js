@@ -6,7 +6,7 @@ const validarJWT = (req, res=response, next)=>{
    if(!token){
       return res.status(401).json({
          ok:false,
-         msg: 'No hay token'
+         msg: 'There are not token active'
       })
    }
 
@@ -20,7 +20,7 @@ const validarJWT = (req, res=response, next)=>{
    } catch (error) {
       return res.status(500).json({
          ok:false,
-         msg: 'Token no valido'
+         msg: 'Invalid token'
       })
    }
 

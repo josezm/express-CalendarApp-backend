@@ -15,7 +15,7 @@ const crearUsuario = async (req, res) =>{
       if(usuario){
          return res.status(400).json({
             ok:false,
-            msg: "El email ha sido registrado con otro usuario"
+            msg: "This user already exist"
          })
       }
 
@@ -40,7 +40,7 @@ const crearUsuario = async (req, res) =>{
       console.log(error)
       return res.status(500).json({
          ok:false,
-         msg: "Ocurrió un error inesperado"
+         msg: "Something went wrong"
       })
    }
 
